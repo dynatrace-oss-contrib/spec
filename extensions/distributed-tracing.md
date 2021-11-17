@@ -17,7 +17,7 @@ Also from [OpenTelemetry specification](https://github.com/open-telemetry/opente
 
 ## Using the Distributed Tracing Extension
 
-The [OpenTelemetry Semantic Conventions for CloudEvents]() defines in which scenarios
+The [OpenTelemetry Semantic Conventions for CloudEvents](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/cloudevents.md) defines in which scenarios
 this extension should be used and how to use it.
 
 ## Attributes
