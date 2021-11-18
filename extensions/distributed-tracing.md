@@ -2,26 +2,25 @@
 
 This extension embeds context from
 [W3C TraceContext](https://www.w3.org/TR/trace-context/) into a CloudEvent.
-The objective of this extension is to carry context when instrumenting
-CloudEvent based systems with OpenTelemetry.
+The goal of this extension is to offer means to carry context when instrumenting
+CloudEvents based systems with OpenTelemetry.
 
 The [OpenTelemetry](https://opentelemetry.io/) project is a collection
 of tools, APIs and SDKs that can be used to instrument, generate, collect,
 and export telemetry data (metrics, logs, and traces) to help you
 analyze your software’s performance and behavior.
 
-The [OpenTelemetry specification](
-https://github.com/open-telemetry/opentelemetry-specification/blob/v1.8.0/specification/context/context.md#overview)
-defines `context` as:
+The OpenTelemetry specification defines both
+[Context](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.8.0/specification/context/context.md#overview)
+and
+[Distributed Tracing](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.8.0/specification/overview.md#tracing-signal)
+as:
 
 > A `Context` is a propagation mechanism which carries execution-scoped values across
  API boundaries and between logically associated execution units. Cross-cutting
  concerns access their data in-process using the same shared `Context` object.
-
-Context propagation is what enables `Distributed Tracing`.
-Also from the [OpenTelemetry specification](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.8.0/specification/overview.md#tracing-signal):
-
-> A distributed trace is a set of events, triggered as a result of a single
+>
+> A `Distributed Trace` is a set of events, triggered as a result of a single
  logical operation, consolidated across various components of an application.
  A distributed trace contains events that cross process, network and security boundaries.
 
