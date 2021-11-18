@@ -2,17 +2,24 @@
 
 This extension embeds context from
 [W3C TraceContext](https://www.w3.org/TR/trace-context/) into a CloudEvent.
+The objective of this extension is to carry context when instrumenting
+CloudEvent based systems with OpenTelemetry.
+
+The [OpenTelemetry](https://opentelemetry.io/) project is a collection
+of tools, APIs and SDKs that can be used to instrument, generate, collect,
+and export telemetry data (metrics, logs, and traces) to help you
+analyze your software’s performance and behavior.
 
 The [OpenTelemetry specification](
-https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/context/context.md#overview)
-defines context as:
+https://github.com/open-telemetry/opentelemetry-specification/blob/v1.8.0/specification/context/context.md#overview)
+defines `context` as:
 
-> A Context is a propagation mechanism which carries execution-scoped values across
+> A `Context` is a propagation mechanism which carries execution-scoped values across
  API boundaries and between logically associated execution units. Cross-cutting
- concerns access their data in-process using the same shared Context object.
+ concerns access their data in-process using the same shared `Context` object.
 
-Context propagation enables `Distributed Tracing`.
-Also from [OpenTelemetry specification](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/overview.md#tracing-signal):
+Context propagation is what enables `Distributed Tracing`.
+Also from the [OpenTelemetry specification](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.8.0/specification/overview.md#tracing-signal):
 
 > A distributed trace is a set of events, triggered as a result of a single
  logical operation, consolidated across various components of an application.
@@ -21,8 +28,8 @@ Also from [OpenTelemetry specification](https://github.com/open-telemetry/opente
 ## Using the Distributed Tracing Extension
 
 The
-[OpenTelemetry Semantic Conventions for CloudEvents](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/cloudevents.md)
-defines in which scenarios this extension should be used and how to use it.
+[OpenTelemetry Semantic Conventions for CloudEvents](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.9.0/specification/trace/semantic_conventions/cloudevents.md)
+define in which scenarios this extension should be used and how to use it.
 
 ## Attributes
 
